@@ -9,7 +9,6 @@
     "depends": ["mrp"],
     "data": [
         "views/mrp_view.xml",
-        "static/src/mrp_bom_overview_line.xml",
         "report/mrp_report_bom_structure_inherit.xml",
     ],
     'assets': {
@@ -17,5 +16,8 @@
             'custom_indogosa/static/src/js/formatters.js',
             ]
     },
+    "qweb": [
+        "static/src/xml/mrp_bom_overview_line.xml",
+    ],
     "installable": True,
 }

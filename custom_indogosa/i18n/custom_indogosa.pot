@@ -1,0 +1,96 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* custom_indogosa
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-30 12:28+0000\n"
+"PO-Revision-Date: 2023-10-30 12:28+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: custom_indogosa
+#: model_terms:ir.ui.view,arch_db:custom_indogosa.product_template_additional_specs
+msgid "Additionals specs"
+msgstr ""
+
+#. module: custom_indogosa
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_product__base_pallet
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_product__broad_box
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_product__height_pallet
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_template__base_pallet
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_template__broad_box
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_template__height_pallet
+msgid "Box broad"
+msgstr ""
+
+#. module: custom_indogosa
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_product__high_box
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_template__high_box
+msgid "Box high"
+msgstr ""
+
+#. module: custom_indogosa
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_product__long_box
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_template__long_box
+msgid "Box long"
+msgstr ""
+
+#. module: custom_indogosa
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_product__volume_box
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_template__volume_box
+msgid "Box volume"
+msgstr ""
+
+#. module: custom_indogosa
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_product__weight_box
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_template__weight_box
+msgid "Box weight"
+msgstr ""
+
+#. module: custom_indogosa
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_product__broad
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_template__broad
+msgid "Broad"
+msgstr ""
+
+#. module: custom_indogosa
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_product__dun14
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_template__dun14
+msgid "Dun 14"
+msgstr ""
+
+#. module: custom_indogosa
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_product__high
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_template__high
+msgid "High"
+msgstr ""
+
+#. module: custom_indogosa
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_product__long
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_template__long
+msgid "Long"
+msgstr ""
+
+#. module: custom_indogosa
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_product__box_pallet
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_template__box_pallet
+msgid "Number of box"
+msgstr ""
+
+#. module: custom_indogosa
+#: model:ir.model,name:custom_indogosa.model_product_template
+msgid "Product"
+msgstr ""
+
+#. module: custom_indogosa
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_product__ufi
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_template__ufi
+msgid "Ufi"
+msgstr ""

@@ -7,24 +7,55 @@ from odoo import api, fields, models
 class ProductTemplate(models.Model):
     _inherit = 'product.template'
 
-    weight = fields.Float(
-        string='Weight',
+    ufi = fields.Char(
+        string='Ufi',
         readonly=False,
     )
-    volume = fields.Float(
-        string='Volume',
+    dun14 = fields.Char(
+        string='Dun 14',
         readonly=False,
     )
-    pallet_units = fields.Integer(
-        string='Pallet Units',
+    long = fields.Float(
+        string='Long',
         readonly=False,
     )
-    box_units = fields.Integer(
-        string='Box Units',
+    high = fields.Float(
+        string='High',
         readonly=False,
     )
-    package_units = fields.Integer(
-        string='Package Units',
+    broad = fields.Float(
+        string='Broad',
         readonly=False,
     )
-
+    weight_box = fields.Float(
+        string='Box weight',
+        readonly=False,
+    )
+    volume_box = fields.Float(
+        string='Box volume',
+        readonly=False,
+    )
+    long_box = fields.Float(
+        string='Box long',
+        readonly=False,
+    )
+    high_box = fields.Float(
+        string='Box high',
+        readonly=False,
+    )
+    broad_box = fields.Float(
+        string='Box broad',
+        readonly=False,
+    )
+    box_pallet = fields.Integer(
+        string='Number of box',
+        readonly=False,
+    )
+    base_pallet = fields.Integer(
+        string='Box broad',
+        readonly=False,
+    )
+    height_pallet = fields.Integer(
+        string='Box broad',
+        readonly=False,
+    )

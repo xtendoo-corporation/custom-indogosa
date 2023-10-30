@@ -9,6 +9,7 @@
     "depends": ["mrp"],
     "data": [
         "views/mrp_view.xml",
+        "views/product_template_view.xml",
         "report/mrp_report_bom_structure_inherit.xml",
     ],
     'assets': {

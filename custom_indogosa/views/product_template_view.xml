@@ -1,24 +1,30 @@
 <odoo>
-    <record id="product_template_additional_specs" model="ir.ui.view">
+    <record id="product_template_logistics" model="ir.ui.view">
         <field name="model">product.template</field>
         <field name="inherit_id" ref="product.product_template_form_view" />
         <field name="arch" type="xml">
             <xpath expr="//page[@name='general_information']" position="after">
-                <page name="additionals_specs" string="Additionals specs">
+                <page name="logistics" string="Logistica">
                     <group>
-                        <field name="ufi" class="oe_inline"/>
-                        <field name="dun14" class="oe_inline" />
-                        <field name="long" class="oe_inline" />
-                        <field name="high" class="oe_inline" />
-                        <field name="broad" class="oe_inline" />
-                        <field name="weight_box" class="oe_inline" />
-                        <field name="volume_box" class="oe_inline" />
-                        <field name="long_box" class="oe_inline" />
-                        <field name="high_box" class="oe_inline" />
-                        <field name="broad_box" class="oe_inline" />
-                        <field name="box_pallet" class="oe_inline" />
-                        <field name="base_pallet" class="oe_inline" />
-                        <field name="height_pallet" class="oe_inline" />
+                        <group name="product" string="Producto">
+                            <field name="ufi" class="oe_inline"/>
+                            <field name="dun14" class="oe_inline" />
+                            <field name="long" class="oe_inline" />
+                            <field name="high" class="oe_inline" />
+                            <field name="broad" class="oe_inline" />
+                        </group>
+                        <group name="box" string="Cajas">
+                            <field name="weight_box" class="oe_inline" />
+                            <field name="volume_box" class="oe_inline" />
+                            <field name="long_box" class="oe_inline" />
+                            <field name="high_box" class="oe_inline" />
+                            <field name="broad_box" class="oe_inline" />
+                        </group>
+                        <group name="pallet" string="Palets">
+                            <field name="box_pallet" class="oe_inline" />
+                            <field name="base_pallet" class="oe_inline" />
+                            <field name="height_pallet" class="oe_inline" />
+                        </group>
                     </group>
                 </page>
             </xpath>

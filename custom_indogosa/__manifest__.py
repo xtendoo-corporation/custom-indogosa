@@ -13,6 +13,7 @@
     "data": [
         "views/mrp_view.xml",
         "views/product_template_view.xml",
+        "views/product_pricelist_item_view.xml",
         "report/mrp_report_bom_structure_inherit.xml",
     ],
     'assets': {

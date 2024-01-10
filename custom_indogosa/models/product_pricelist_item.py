@@ -10,8 +10,7 @@ class ProductPricelistItem(models.Model):
     global_discount_ids = fields.Many2many(
         comodel_name="global.discount",
         string="Sale Global Discounts",
-        domain="[('discount_scope', '=', 'sale'), "
-               "('company_id', '=', company_id), ('company_id', '=', False)]",
+        domain="[('discount_scope', '=', 'sale'), '|', ('company_id', '=', company_id), ('company_id', '=', False)]",
     )
     price_discounted = fields.Float(
         string="Price Discounted",

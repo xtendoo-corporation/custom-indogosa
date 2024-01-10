@@ -9,8 +9,9 @@
                 <field name="price_discounted" readonly="1"/>
             </xpath>
             <xpath expr="//field[@name='product_tmpl_id']" position="after">
-                <field name="product_price_discounted" readonly="1" attrs="{
-                'invisible':[('applied_on', '!=', '1_product')]}"/>
+                <field name="product_price_discounted"
+                       readonly="1"
+                       attrs="{'invisible':[('applied_on', '!=', '1_product')]}"/>
             </xpath>
         </field>
     </record>

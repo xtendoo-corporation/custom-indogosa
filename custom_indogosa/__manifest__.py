@@ -6,7 +6,10 @@
     "author": "Xtendoo",
     "license": "LGPL-3",
     "application": True,
-    "depends": ["mrp"],
+    "depends": [
+        "mrp",
+        "base_global_discount",
+    ],
     "data": [
         "views/mrp_view.xml",
         "views/product_template_view.xml",

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-08 07:29+0000\n"
-"PO-Revision-Date: 2023-11-08 07:29+0000\n"
+"POT-Creation-Date: 2024-01-11 10:59+0000\n"
+"PO-Revision-Date: 2024-01-11 10:59+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -50,15 +50,15 @@ msgid "Box weight"
 msgstr "Peso"
 
 #. module: custom_indogosa
-#: model_terms:ir.ui.view,arch_db:custom_indogosa.product_template_additional_specs
-msgid "Boxes"
-msgstr "Cajas"
-
-#. module: custom_indogosa
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_product__broad
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_template__broad
 msgid "Broad"
 msgstr "Ancho"
+
+#. module: custom_indogosa
+#: model_terms:ir.ui.view,arch_db:custom_indogosa.product_template_logistics
+msgid "Boxes"
+msgstr "Cajas"
 
 #. module: custom_indogosa
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_product__dun14
@@ -73,7 +73,21 @@ msgid "High"
 msgstr "Alto"
 
 #. module: custom_indogosa
-#: model_terms:ir.ui.view,arch_db:custom_indogosa.product_template_additional_specs
+#: model:ir.model.fields,help:custom_indogosa.field_product_pricelist_item__product_price_cost
+#: model:ir.model.fields,help:custom_indogosa.field_product_pricelist_item__product_tmpl_price_cost
+msgid ""
+"In Standard Price & AVCO: value of the product (automatically computed in AVCO).\n"
+"        In FIFO: value of the next unit that will leave the stock (automatically computed).\n"
+"        Used to value the product when the purchase cost is not known (e.g. inventory adjustment).\n"
+"        Used to compute margins on sale orders."
+msgstr ""
+"En Precio Estándar y AVCO: valor del producto (calculado automáticamente en AVCO).\n"
+"        En FIFO: valor de la próxima unidad que saldrá del stock (calculado automáticamente).\n"
+"        Se utiliza para valorar el producto cuando el costo de compra no es conocido (por ejemplo, ajuste de inventario).\n"
+"        Se utiliza para calcular los márgenes en pedidos de venta."
+
+#. module: custom_indogosa
+#: model_terms:ir.ui.view,arch_db:custom_indogosa.product_template_logistics
 msgid "Logistics"
 msgstr "Logistica"
 
@@ -87,18 +101,57 @@ msgstr "Largo"
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_product__box_pallet
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_template__box_pallet
 msgid "Number of box"
-msgstr "Número de cajas"
+msgstr "Numero de cajas"
 
 #. module: custom_indogosa
-#: model_terms:ir.ui.view,arch_db:custom_indogosa.product_template_additional_specs
+#: model_terms:ir.ui.view,arch_db:custom_indogosa.product_template_logistics
 msgid "Pallets"
 msgstr "Palets"
 
 #. module: custom_indogosa
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_pricelist_item__price_discounted
+msgid "Price Discounted"
+msgstr "Precio con descuento"
+
+#. module: custom_indogosa
+#: model:ir.model,name:custom_indogosa.model_product_pricelist_item
+msgid "Pricelist Rule"
+msgstr "Regla de lista de precios"
+
+#. module: custom_indogosa
 #: model:ir.model,name:custom_indogosa.model_product_template
-#: model_terms:ir.ui.view,arch_db:custom_indogosa.product_template_additional_specs
 msgid "Product"
 msgstr "Producto"
+
+#. module: custom_indogosa
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_pricelist_item__product_price_cost
+msgid "Product Price Cost"
+msgstr "Costo del producto"
+
+#. module: custom_indogosa
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_pricelist_item__product_profit_margin
+msgid "Product Profit Margin"
+msgstr "Margen de beneficio del producto"
+
+#. module: custom_indogosa
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_pricelist_item__product_tmpl_price_cost
+msgid "Product Template Price Cost"
+msgstr "Costo del producto"
+
+#. module: custom_indogosa
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_pricelist_item__product_tmpl_profit_margin
+msgid "Product Template Profit Margin"
+msgstr "Margen de beneficio del producto"
+
+#. module: custom_indogosa
+#: model_terms:ir.ui.view,arch_db:custom_indogosa.product_template_logistics
+msgid "Product"
+msgstr "Producto"
+
+#. module: custom_indogosa
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_pricelist_item__global_discount_ids
+msgid "Sale Global Discounts"
+msgstr "Descuentos globales de venta"
 
 #. module: custom_indogosa
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_product__ufi

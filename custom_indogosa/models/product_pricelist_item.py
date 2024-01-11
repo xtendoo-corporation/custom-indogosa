@@ -26,6 +26,14 @@ class ProductPricelistItem(models.Model):
         related="product_id.standard_price",
         string="Product Price Cost",
     )
+    product_tmpl_profit_margin = fields.Float(
+        string="Product Template Profit Margin",
+        store=True,
+    )
+    product_profit_margin = fields.Float(
+        string="Product Profit Margin",
+        store=True,
+    )
 
     @api.onchange('global_discount_ids', 'fixed_price')
     def _onchange_global_discount_ids(self):
@@ -35,4 +43,12 @@ class ProductPricelistItem(models.Model):
                 base = discount._get_global_discount_vals(base)["base_discounted"]
         self.price_discounted = base
 
+    @api.onchange('product_tmpl_price_cost', 'price_discounted')
+    def _onchange_product_tmpl_price_cost(self):
+        if self.product_tmpl_price_cost:
+            self.product_tmpl_profit_margin = self.price_discounted - self.product_tmpl_price_cost
 
+    @api.onchange('product_price_cost', 'price_discounted')
+    def _onchange_product_price_cost(self):
+        if self.product_price_cost:
+            self.product_profit_margin = self.price_discounted - self.product_price_cost

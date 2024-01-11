@@ -14,13 +14,17 @@ class ProductPricelistItem(models.Model):
     )
     price_discounted = fields.Float(
         string="Price Discounted",
+        store=True,
         required=False,
         readonly=True,
     )
-    product_price_discounted = fields.Float(
-        string="Product Price Discounted",
-        required=False,
-        readonly=True,
+    product_tmpl_price_cost = fields.Float(
+        related="product_tmpl_id.standard_price",
+        string="Product Template Price Cost",
+    )
+    product_price_cost = fields.Float(
+        related="product_id.standard_price",
+        string="Product Price Cost",
     )
 
     @api.onchange('global_discount_ids', 'fixed_price')
@@ -31,12 +35,4 @@ class ProductPricelistItem(models.Model):
                 base = discount._get_global_discount_vals(base)["base_discounted"]
         self.price_discounted = base
 
-    @api.onchange('global_discount_ids', 'product_tmpl_id')
-    def _onchange_product_price_id(self):
-        base = self.product_tmpl_id.standard_price
-        print("BASE", base)
-        if self.global_discount_ids:
-            for discount in self.global_discount_ids:
-                base = discount._get_global_discount_vals(base)["base_discounted"]
-        print("BASE 2", base)
-        self.product_price_discounted = base
+

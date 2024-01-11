@@ -6,12 +6,17 @@
         <field name="arch" type="xml">
             <xpath expr="//field[@name='fixed_price']" position="after">
                 <field name="global_discount_ids" widget="many2many_tags"/>
-                <field name="price_discounted" readonly="1"/>
+                <field name="price_discounted" readonly="1" force_save="1"/>
             </xpath>
             <xpath expr="//field[@name='product_tmpl_id']" position="after">
-                <field name="product_price_discounted"
+                <field name="product_tmpl_price_cost"
                        readonly="1"
                        attrs="{'invisible':[('applied_on', '!=', '1_product')]}"/>
+            </xpath>
+            <xpath expr="//field[@name='product_id']" position="after">
+                <field name="product_price_cost"
+                       readonly="1"
+                       attrs="{'invisible':[('applied_on', '!=', '0_product_variant')]}"/>
             </xpath>
         </field>
     </record>

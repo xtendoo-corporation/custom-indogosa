@@ -34,6 +34,14 @@ class ProductPricelistItem(models.Model):
         string="Product Profit Margin",
         store=True,
     )
+    product_tmpl_profit_percentage = fields.Float(
+        string="Profit Margin (%)",
+        store=True,
+    )
+    product_profit_percentage = fields.Float(
+        string="Profit Margin (%)",
+        store=True,
+    )
 
     @api.onchange('global_discount_ids', 'fixed_price')
     def _onchange_global_discount_ids(self):
@@ -47,8 +55,10 @@ class ProductPricelistItem(models.Model):
     def _onchange_product_tmpl_price_cost(self):
         if self.product_tmpl_price_cost:
             self.product_tmpl_profit_margin = self.price_discounted - self.product_tmpl_price_cost
+            self.product_tmpl_profit_percentage = self.product_tmpl_profit_margin / self.product_tmpl_price_cost * 100
 
     @api.onchange('product_price_cost', 'price_discounted')
     def _onchange_product_price_cost(self):
         if self.product_price_cost:
             self.product_profit_margin = self.price_discounted - self.product_price_cost
+            self.product_profit_percentage = self.product_profit_margin / self.product_price_cost * 100

@@ -15,6 +15,9 @@
                 <field name="product_tmpl_profit_margin"
                        readonly="1"
                        attrs="{'invisible':[('applied_on', '!=', '1_product')]}"/>
+                <field name="product_tmpl_profit_percentage"
+                       readonly="1"
+                       attrs="{'invisible':[('applied_on', '!=', '1_product')]}"/>
             </xpath>
             <xpath expr="//field[@name='product_id']" position="after">
                 <field name="product_price_cost"
@@ -23,6 +26,9 @@
                 <field name="product_profit_margin"
                        readonly="1"
                        attrs="{'invisible':[('applied_on', '!=', '0_product_variant')]}"/>
+                <field name="product_profit_percentage"
+                          readonly="1"
+                          attrs="{'invisible':[('applied_on', '!=', '0_product_variant')]}"/>
             </xpath>
         </field>
     </record>

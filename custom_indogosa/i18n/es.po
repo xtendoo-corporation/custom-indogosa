@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-11 10:59+0000\n"
-"PO-Revision-Date: 2024-01-11 10:59+0000\n"
+"POT-Creation-Date: 2024-01-11 12:26+0000\n"
+"PO-Revision-Date: 2024-01-11 12:26+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -89,7 +89,7 @@ msgstr ""
 #. module: custom_indogosa
 #: model_terms:ir.ui.view,arch_db:custom_indogosa.product_template_logistics
 msgid "Logistics"
-msgstr "Logistica"
+msgstr "Logisitica"
 
 #. module: custom_indogosa
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_product__long
@@ -116,7 +116,7 @@ msgstr "Precio con descuento"
 #. module: custom_indogosa
 #: model:ir.model,name:custom_indogosa.model_product_pricelist_item
 msgid "Pricelist Rule"
-msgstr "Regla de lista de precios"
+msgstr "Regla de Tarifa"
 
 #. module: custom_indogosa
 #: model:ir.model,name:custom_indogosa.model_product_template
@@ -147,6 +147,12 @@ msgstr "Margen de beneficio del producto"
 #: model_terms:ir.ui.view,arch_db:custom_indogosa.product_template_logistics
 msgid "Product"
 msgstr "Producto"
+
+#. module: custom_indogosa
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_pricelist_item__product_profit_percentage
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_pricelist_item__product_tmpl_profit_percentage
+msgid "Profit Margin (%)"
+msgstr "Margen de beneficio (%)"
 
 #. module: custom_indogosa
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_pricelist_item__global_discount_ids

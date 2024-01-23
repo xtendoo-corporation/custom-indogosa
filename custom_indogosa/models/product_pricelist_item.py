@@ -14,25 +14,33 @@ class ProductPricelistItem(models.Model):
     )
     price_discounted = fields.Float(
         string="Price Discounted",
+        digits=(12, 6),
         store=True,
         required=False,
         readonly=True,
     )
+    fixed_price = fields.Float(
+        digits=(12, 6),
+    )
     product_tmpl_price_cost = fields.Float(
         related="product_tmpl_id.standard_price",
         string="Product Template Price Cost",
+        digits=(12, 6),
     )
     product_price_cost = fields.Float(
         related="product_id.standard_price",
         string="Product Price Cost",
+        digits=(12, 6),
     )
     product_tmpl_profit_margin = fields.Float(
         string="Product Template Profit Margin",
         store=True,
+        digits=(12, 6),
     )
     product_profit_margin = fields.Float(
         string="Product Profit Margin",
         store=True,
+        digits=(12, 6),
     )
     product_tmpl_profit_percentage = fields.Float(
         string="Profit Margin (%)",

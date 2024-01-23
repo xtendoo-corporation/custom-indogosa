@@ -105,6 +105,11 @@ msgid "Palets"
 msgstr ""
 
 #. module: custom_indogosa
+#: model:ir.model.fields,field_description:custom_indogosa.field_stock_move_line__partner_name
+msgid "Partner"
+msgstr ""
+
+#. module: custom_indogosa
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_pricelist_item__price_discounted
 msgid "Price Discounted"
 msgstr ""

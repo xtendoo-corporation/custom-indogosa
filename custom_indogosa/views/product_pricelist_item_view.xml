@@ -27,8 +27,8 @@
                        readonly="1"
                        attrs="{'invisible':[('applied_on', '!=', '0_product_variant')]}"/>
                 <field name="product_profit_percentage"
-                          readonly="1"
-                          attrs="{'invisible':[('applied_on', '!=', '0_product_variant')]}"/>
+                       readonly="1"
+                       attrs="{'invisible':[('applied_on', '!=', '0_product_variant')]}"/>
             </xpath>
         </field>
     </record>

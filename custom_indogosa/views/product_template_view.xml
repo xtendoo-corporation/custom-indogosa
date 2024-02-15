@@ -6,24 +6,30 @@
             <xpath expr="//page[@name='general_information']" position="after">
                 <page name="logistics" string="Logistica">
                     <group>
-                        <group name="product" string="Producto">
+                        <group name="codification" string="Codificación">
                             <field name="ufi" class="oe_inline"/>
                             <field name="dun14" class="oe_inline" />
+                        </group>
+                        <group name="product" string="Producto">
                             <field name="long" class="oe_inline" />
                             <field name="high" class="oe_inline" />
                             <field name="broad" class="oe_inline" />
                         </group>
                         <group name="box" string="Cajas">
                             <field name="weight_box" class="oe_inline" />
-                            <field name="volume_box" class="oe_inline" />
+                            <field name="volume_box" class="oe_inline" />l
                             <field name="long_box" class="oe_inline" />
                             <field name="high_box" class="oe_inline" />
                             <field name="broad_box" class="oe_inline" />
+                            <field name="bottle_box" class="oe_inline" />
                         </group>
                         <group name="pallet" string="Palets">
                             <field name="box_pallet" class="oe_inline" />
                             <field name="base_pallet" class="oe_inline" />
                             <field name="height_pallet" class="oe_inline" />
+                            <field name="weight_pallet" class="oe_inline" />
+                            <field name="volume_pallet" class="oe_inline" />
+                            <field name="layers_pallet" class="oe_inline" />
                         </group>
                     </group>
                 </page>

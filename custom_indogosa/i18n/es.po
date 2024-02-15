@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-11 12:26+0000\n"
-"PO-Revision-Date: 2024-01-11 12:26+0000\n"
+"POT-Creation-Date: 2024-02-15 12:11+0000\n"
+"PO-Revision-Date: 2024-02-15 12:11+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,61 +16,90 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: custom_indogosa
+#: model:ir.model.fields,field_description:custom_indogosa.field_account_tax__amount
+msgid "Amount"
+msgstr "Importe"
+
+#. module: custom_indogosa
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_product__base_pallet
-#: model:ir.model.fields,field_description:custom_indogosa.field_product_product__broad_box
-#: model:ir.model.fields,field_description:custom_indogosa.field_product_product__height_pallet
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_template__base_pallet
+msgid "Base pallet"
+msgstr "Ancho (mm)"
+
+#. module: custom_indogosa
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_product__bottle_box
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_template__bottle_box
+msgid "Bottle box"
+msgstr "Nº botellas (unds)"
+
+#. module: custom_indogosa
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_product__broad_box
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_template__broad_box
-#: model:ir.model.fields,field_description:custom_indogosa.field_product_template__height_pallet
 msgid "Box broad"
-msgstr "Ancho"
+msgstr "Ancho (mm)"
 
 #. module: custom_indogosa
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_product__high_box
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_template__high_box
 msgid "Box high"
-msgstr "Alto"
+msgstr "Alto (mm)"
 
 #. module: custom_indogosa
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_product__long_box
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_template__long_box
 msgid "Box long"
-msgstr "Largo"
+msgstr "Largo (mm)"
 
 #. module: custom_indogosa
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_product__volume_box
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_template__volume_box
 msgid "Box volume"
-msgstr "Volumen"
+msgstr "Volumen (lt)"
 
 #. module: custom_indogosa
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_product__weight_box
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_template__weight_box
 msgid "Box weight"
-msgstr "Peso"
+msgstr "Peso (kg)"
 
 #. module: custom_indogosa
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_product__broad
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_template__broad
 msgid "Broad"
-msgstr "Ancho"
+msgstr "Ancho (mm)"
 
 #. module: custom_indogosa
 #: model_terms:ir.ui.view,arch_db:custom_indogosa.product_template_logistics
-msgid "Boxes"
+msgid "Cajas"
 msgstr "Cajas"
+
+#. module: custom_indogosa
+#: model_terms:ir.ui.view,arch_db:custom_indogosa.product_template_logistics
+msgid "Codificación"
+msgstr "Codificación"
 
 #. module: custom_indogosa
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_product__dun14
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_template__dun14
 msgid "Dun 14"
-msgstr ""
+msgstr "Dun 14"
+
+#. module: custom_indogosa
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_pricelist_item__fixed_price
+msgid "Fixed Price"
+msgstr "Precio fijo"
+
+#. module: custom_indogosa
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_product__height_pallet
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_template__height_pallet
+msgid "Height pallet"
+msgstr "Altura (mm)"
 
 #. module: custom_indogosa
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_product__high
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_template__high
 msgid "High"
-msgstr "Alto"
+msgstr "Alto (mm)"
 
 #. module: custom_indogosa
 #: model:ir.model.fields,help:custom_indogosa.field_product_pricelist_item__product_price_cost
@@ -88,24 +117,31 @@ msgstr ""
 
 #. module: custom_indogosa
 #: model_terms:ir.ui.view,arch_db:custom_indogosa.product_template_logistics
-msgid "Logistics"
-msgstr "Logisitica"
+msgid "Logistica"
+msgstr "Logística"
 
 #. module: custom_indogosa
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_product__long
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_template__long
 msgid "Long"
-msgstr "Largo"
+msgstr "Largo (mm)"
 
 #. module: custom_indogosa
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_product__box_pallet
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_template__box_pallet
 msgid "Number of box"
-msgstr "Numero de cajas"
+msgstr "Numero de cajas (unds)"
+
+#. module: custom_indogosa
+#: model:ir.model.fields,help:custom_indogosa.field_stock_move_line__partner_name
+msgid ""
+"Optional address where goods are to be delivered, specifically used for "
+"allotment"
+msgstr ""
 
 #. module: custom_indogosa
 #: model_terms:ir.ui.view,arch_db:custom_indogosa.product_template_logistics
-msgid "Pallets"
+msgid "Palets"
 msgstr "Palets"
 
 #. module: custom_indogosa
@@ -129,6 +165,11 @@ msgid "Product"
 msgstr "Producto"
 
 #. module: custom_indogosa
+#: model:ir.model,name:custom_indogosa.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr ""
+
+#. module: custom_indogosa
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_pricelist_item__product_price_cost
 msgid "Product Price Cost"
 msgstr "Costo del producto"
@@ -150,7 +191,7 @@ msgstr "Margen de beneficio del producto"
 
 #. module: custom_indogosa
 #: model_terms:ir.ui.view,arch_db:custom_indogosa.product_template_logistics
-msgid "Product"
+msgid "Producto"
 msgstr "Producto"
 
 #. module: custom_indogosa
@@ -165,7 +206,30 @@ msgid "Sale Global Discounts"
 msgstr "Descuentos globales de venta"
 
 #. module: custom_indogosa
+#: model:ir.model,name:custom_indogosa.model_account_tax
+msgid "Tax"
+msgstr "Impuesto"
+
+#. module: custom_indogosa
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_product__ufi
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_template__ufi
 msgid "Ufi"
-msgstr ""
+msgstr "Ufi"
+
+#. module: custom_indogosa
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_product__volume_pallet
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_template__volume_pallet
+msgid "Volume pallet"
+msgstr "Volumen (lts)"
+
+#. module: custom_indogosa
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_product__weight_pallet
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_template__weight_pallet
+msgid "Weight pallet"
+msgstr "Peso (kg)"
+
+#. module: custom_indogosa
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_product__layers_pallet
+#: model:ir.model.fields,field_description:custom_indogosa.field_product_template__layers_pallet
+msgid "layers pallet"
+msgstr "Capas (unds)"

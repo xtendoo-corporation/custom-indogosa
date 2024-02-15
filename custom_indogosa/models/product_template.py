@@ -47,15 +47,31 @@ class ProductTemplate(models.Model):
         string='Box broad',
         readonly=False,
     )
+    bottle_box = fields.Float(
+        string='Bottle box',
+        readonly=False,
+    )
     box_pallet = fields.Integer(
         string='Number of box',
         readonly=False,
     )
-    base_pallet = fields.Integer(
-        string='Box broad',
+    base_pallet = fields.Float(
+        string='Base pallet',
         readonly=False,
     )
-    height_pallet = fields.Integer(
-        string='Box broad',
+    height_pallet = fields.Float(
+        string='Height pallet',
+        readonly=False,
+    )
+    weight_pallet = fields.Float(
+        string='Weight pallet',
+        readonly=False,
+    )
+    volume_pallet = fields.Float(
+        string='Volume pallet',
+        readonly=False,
+    )
+    layers_pallet = fields.Float(
+        string='layers pallet',
         readonly=False,
     )

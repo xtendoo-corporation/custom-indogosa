@@ -8,105 +8,15 @@
                     <thead>
                         <tr>
                             <th>
-                                <span>Especificaciones del producto</span>
+                                <span>Especificaciones</span>
                             </th>
                         </tr>
                     </thead>
                     <tbody class="ui-sortable text-muted">
                         <tr>
                             <td>
-                                <span>Largo:</span>
-                                <span t-field="product.long"/>
-                                <span>(mm)</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span>Alto:</span>
-                                <span t-field="product.high"/>
-                                <span>(mm)</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span>Ancho:</span>
-                                <span t-field="product.broad"/>
-                                <span>(mm)</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-
-<!--LOGISTICA CAJAS Y PALETS-->
-                <table t-attf-class="o_list_table table table-sm table-hover">
-                    <thead>
-                        <tr>
-                            <th>
-                                <span>Especificaciones de cajas</span>
-                            </th>
-                            <th>
-                                <span>Especificaciones de palets</span>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody class="ui-sortable text-muted">
-                        <tr>
-                            <td>
-                                <span>Peso:</span>
-                                <span t-field="product.weight_box"/>
-                                <span>(kg)</span>
-                            </td>
-                            <td>
-                                <span>Nº de cajas:</span>
-                                <span t-field="product.box_pallet"/>
-                                <span>(unds)</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span>Volumen:</span>
+                                <span>Volumen caja:</span>
                                 <span t-field="product.volume_box"/>
-                                <span>(lts)</span>
-                            </td>
-                            <td>
-                                <span>Ancho:</span>
-                                <span t-field="product.base_pallet"/>
-                                <span>(mm)</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span>Largo:</span>
-                                <span t-field="product.long_box"/>
-                                <span>(mm)</span>
-                            </td>
-                            <td>
-                                <span>Alto:</span>
-                                <span t-field="product.height_pallet"/>
-                                <span>(mm)</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span>Alto:</span>
-                                <span t-field="product.high_box"/>
-                                <span>(mm)</span>
-                            </td>
-                            <td>
-                                <span>Peso:</span>
-                                <span t-field="product.weight_pallet"/>
-                                <span>(kg)</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span>Ancho:</span>
-                                <span t-field="product.broad_box"/>
-                                <span>(mm)</span>
-                            </td>
-                            <td>
-                                <span>Volumen:</span>
-                                <span t-field="product.volume_pallet"/>
                                 <span>(lts)</span>
                             </td>
                         </tr>
@@ -116,9 +26,11 @@
                                 <span t-field="product.bottle_box"/>
                                 <span>(unds)</span>
                             </td>
+                        </tr>
+                        <tr>
                             <td>
-                                <span>Capas:</span>
-                                <span t-field="product.layers_pallet"/>
+                                <span>Nº de cajas:</span>
+                                <span t-field="product.box_pallet"/>
                                 <span>(unds)</span>
                             </td>
                         </tr>

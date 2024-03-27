@@ -15,23 +15,28 @@
                     <tbody class="ui-sortable text-muted">
                         <tr>
                             <td>
-                                <span>Volumen caja:</span>
+                                <span>Peso:</span>
+                                <span t-field="product.weight"/>
+                                <span> kilos</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>Volumen de caja:</span>
                                 <span t-field="product.volume_box"/>
-                                <span>(lts)</span>
+                                <span> litros</span>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <span>Nº de botellas:</span>
+                                <span>Número de botellas por caja:</span>
                                 <span t-field="product.bottle_box"/>
-                                <span>(unds)</span>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <span>Nº de cajas:</span>
+                                <span>Número de cajas por palé:</span>
                                 <span t-field="product.box_pallet"/>
-                                <span>(unds)</span>
                             </td>
                         </tr>
                     </tbody>

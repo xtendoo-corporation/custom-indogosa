@@ -4,7 +4,7 @@
         <xpath expr="//div[@id='product_attributes_simple']" position="after">
             <div>
                 <table t-attf-class="o_list_table table table-sm table-hover">
-<!--LOGISTICA PRODUCTO-->
+                    <!--LOGISTICA PRODUCTO-->
                     <thead>
                         <tr>
                             <th>
@@ -16,21 +16,23 @@
                         <tr>
                             <td>
                                 <span>Peso:</span>
-                                <span t-field="product.weight"/>
-                                <span> kilos</span>
+                                <!--                                <span t-field="product.weight" />-->
+                                <t t-esc="product.weight" t-esc-options='{"widget": "float", "precision": 2}'/>
+                                <span>kilos</span>
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <span>Volumen de caja:</span>
                                 <span t-field="product.volume_box"/>
-                                <span> litros</span>
+                                <span>litros</span>
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <span>Número de botellas por caja:</span>
-                                <span t-field="product.bottle_box"/>
+                                <!--                                <span t-field="product.bottle_box"/>-->
+                                <t t-esc="int(product.bottle_box)"/>
                             </td>
                         </tr>
                         <tr>

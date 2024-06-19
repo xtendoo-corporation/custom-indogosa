@@ -9,6 +9,7 @@
     "depends": [
         "mrp",
         "base_global_discount",
+        # "xtendoo_mrp_bom_cost",
     ],
     "data": [
         "views/mrp_view.xml",
@@ -21,7 +22,7 @@
     'assets': {
         'web.assets_backend': [
             'custom_indogosa/static/src/js/formatters.js',
-            ]
+        ]
     },
     "qweb": [
         "static/src/xml/mrp_bom_overview_line.xml",

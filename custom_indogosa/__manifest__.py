@@ -9,7 +9,7 @@
     "depends": [
         "mrp",
         "base_global_discount",
-        # "xtendoo_mrp_bom_cost",
+        "xtendoo_mrp_bom_cost",
     ],
     "data": [
         "views/mrp_view.xml",

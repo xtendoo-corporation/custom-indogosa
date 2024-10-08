@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-15 12:11+0000\n"
-"PO-Revision-Date: 2024-02-15 12:11+0000\n"
+"POT-Creation-Date: 2024-10-08 11:21+0000\n"
+"PO-Revision-Date: 2024-10-08 11:21+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -71,18 +71,33 @@ msgstr "Ancho (mm)"
 #. module: custom_indogosa
 #: model_terms:ir.ui.view,arch_db:custom_indogosa.product_template_logistics
 msgid "Cajas"
-msgstr "Cajas"
+msgstr ""
 
 #. module: custom_indogosa
 #: model_terms:ir.ui.view,arch_db:custom_indogosa.product_template_logistics
 msgid "Codificación"
-msgstr "Codificación"
+msgstr ""
+
+#. module: custom_indogosa
+#: model:ir.model,name:custom_indogosa.model_res_config_settings
+msgid "Config Settings"
+msgstr "Opciones de configuración"
+
+#. module: custom_indogosa
+#: model:ir.model.fields.selection,name:custom_indogosa.selection__res_config_settings__product_volume_volume_in_cubic_feet__1
+msgid "Cubic Feet"
+msgstr "Pie cúbico"
+
+#. module: custom_indogosa
+#: model:ir.model.fields.selection,name:custom_indogosa.selection__res_config_settings__product_volume_volume_in_cubic_feet__0
+msgid "Cubic Meters"
+msgstr "Metros cubicos"
 
 #. module: custom_indogosa
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_product__dun14
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_template__dun14
 msgid "Dun 14"
-msgstr "Dun 14"
+msgstr ""
 
 #. module: custom_indogosa
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_pricelist_item__fixed_price
@@ -116,6 +131,11 @@ msgstr ""
 "        Se utiliza para calcular los márgenes en pedidos de venta."
 
 #. module: custom_indogosa
+#: model:ir.model.fields.selection,name:custom_indogosa.selection__res_config_settings__product_volume_volume_in_cubic_feet__2
+msgid "Liters"
+msgstr "Litros"
+
+#. module: custom_indogosa
 #: model_terms:ir.ui.view,arch_db:custom_indogosa.product_template_logistics
 msgid "Logistica"
 msgstr "Logística"
@@ -142,7 +162,7 @@ msgstr ""
 #. module: custom_indogosa
 #: model_terms:ir.ui.view,arch_db:custom_indogosa.product_template_logistics
 msgid "Palets"
-msgstr "Palets"
+msgstr ""
 
 #. module: custom_indogosa
 #: model:ir.model.fields,field_description:custom_indogosa.field_stock_move_line__partner_name
@@ -167,7 +187,7 @@ msgstr "Producto"
 #. module: custom_indogosa
 #: model:ir.model,name:custom_indogosa.model_stock_move_line
 msgid "Product Moves (Stock Move Line)"
-msgstr ""
+msgstr "Movimientos de Producto (Stock Move Line)"
 
 #. module: custom_indogosa
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_pricelist_item__product_price_cost
@@ -192,7 +212,7 @@ msgstr "Margen de beneficio del producto"
 #. module: custom_indogosa
 #: model_terms:ir.ui.view,arch_db:custom_indogosa.product_template_logistics
 msgid "Producto"
-msgstr "Producto"
+msgstr ""
 
 #. module: custom_indogosa
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_pricelist_item__product_profit_percentage
@@ -214,13 +234,18 @@ msgstr "Impuesto"
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_product__ufi
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_template__ufi
 msgid "Ufi"
-msgstr "Ufi"
+msgstr ""
 
 #. module: custom_indogosa
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_product__volume_pallet
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_template__volume_pallet
 msgid "Volume pallet"
 msgstr "Volumen (lts)"
+
+#. module: custom_indogosa
+#: model:ir.model.fields,field_description:custom_indogosa.field_res_config_settings__product_volume_volume_in_cubic_feet
+msgid "Volume unit of measure"
+msgstr "Unidad de medida de volumen"
 
 #. module: custom_indogosa
 #: model:ir.model.fields,field_description:custom_indogosa.field_product_product__weight_pallet

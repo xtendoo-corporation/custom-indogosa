@@ -10,6 +10,8 @@
         "mrp",
         "base_global_discount",
         "xtendoo_mrp_bom_cost",
+        'base',
+        'web',
     ],
     "data": [
         "views/mrp_view.xml",
@@ -22,6 +24,7 @@
     'assets': {
         'web.assets_backend': [
             'custom_indogosa/static/src/js/formatters.js',
+            'custom_indogosa/static/src/js/my_list_renderer.js',
         ]
     },
     "qweb": [

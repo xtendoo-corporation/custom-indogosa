@@ -12,6 +12,13 @@
             >
                 <field name="product_qty" context="{'uom': product_qty}"/>
             </xpath>
+
+             <xpath
+                expr="//div[@class='o_row']"
+                position="after"
+            >
+                 <field name="total_bom_price"/>
+             </xpath>
         </field>
     </record>
 

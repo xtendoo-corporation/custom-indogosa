@@ -23,7 +23,7 @@
                 expr="//field[@name='total_price']"
                 position="replace"
             >
-                 <field name="total_price" context="{'uom': total_price}"/>
+                 <field name="total_price" options="{'precision': 6}" context="{'uom': total_price}"/>
             </xpath>
         </field>
     </record>

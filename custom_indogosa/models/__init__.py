@@ -4,3 +4,4 @@ from . import stock_move_line
 from . import account_tax
 from . import res_config_settings
 from . import mrp_bom
+from . import mrp_bom_line

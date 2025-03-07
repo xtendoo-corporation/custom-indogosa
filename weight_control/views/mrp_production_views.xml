@@ -1,0 +1,23 @@
+<odoo>
+    <record id="view_mrp_production_form_inherit" model="ir.ui.view">
+        <field name="name">mrp.production.form.inherit.weight.control</field>
+        <field name="model">mrp.production</field>
+        <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='operations']" position="after">
+                <page name="weight_control" string="Weight Control">
+                    <field name="weight_control_ids" context="{'default_production_id': active_id}">
+                        <tree editable="bottom">
+                            <field name="employee_id" attrs="{'style': [('is_weight_control', '=', False), 'color: red;']}"/>
+                            <field name="weight" attrs="{'style': [('is_weight_control', '=', False), 'color: red;']}"/>
+                            <field name="minimum_weight" attrs="{'style': [('is_weight_control', '=', False), 'color: red;']}"/>
+                            <field name="maximum_weight" attrs="{'style': [('is_weight_control', '=', False), 'color: red;']}"/>
+                            <field name="date" attrs="{'style': [('is_weight_control', '=', False), 'color: red;']}"/>
+                            <field name="is_weight_control" widget="boolean" />
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

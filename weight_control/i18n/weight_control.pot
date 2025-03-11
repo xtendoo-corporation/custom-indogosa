@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-06 10:26+0000\n"
-"PO-Revision-Date: 2025-03-06 10:26+0000\n"
+"POT-Creation-Date: 2025-03-11 11:35+0000\n"
+"PO-Revision-Date: 2025-03-11 11:35+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,9 +21,74 @@ msgid "Control de pesos"
 msgstr ""
 
 #. module: weight_control
-#: model:ir.model.fields,field_description:weight_control.field_product_product__maximun_weight
-#: model:ir.model.fields,field_description:weight_control.field_product_template__maximun_weight
-msgid "Maximun weight"
+#: model:ir.model.fields,field_description:weight_control.field_mrp_production_weight_control__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: weight_control
+#: model:ir.model.fields,field_description:weight_control.field_mrp_production_weight_control__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: weight_control
+#: model:ir.model.fields,field_description:weight_control.field_mrp_production_weight_control__date
+msgid "Date"
+msgstr ""
+
+#. module: weight_control
+#: model:ir.model.fields,field_description:weight_control.field_mrp_production_weight_control__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: weight_control
+#: model:ir.model.fields,field_description:weight_control.field_mrp_production_weight_control__employee_id
+msgid "Employee"
+msgstr ""
+
+#. module: weight_control
+#: model:ir.model.fields,field_description:weight_control.field_mrp_production_weight_control__id
+msgid "ID"
+msgstr ""
+
+#. module: weight_control
+#: model:ir.model.fields,field_description:weight_control.field_mrp_production_weight_control__is_weight_control
+msgid "Is Weight OK?"
+msgstr ""
+
+#. module: weight_control
+#: model:ir.model.fields,field_description:weight_control.field_mrp_production_weight_control____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: weight_control
+#: model:ir.model.fields,field_description:weight_control.field_mrp_production_weight_control__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: weight_control
+#: model:ir.model.fields,field_description:weight_control.field_mrp_production_weight_control__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: weight_control
+#: model:ir.model.fields,field_description:weight_control.field_mrp_production_weight_control__production_id
+msgid "Manufacturing Order"
+msgstr ""
+
+#. module: weight_control
+#: model:ir.model.fields,field_description:weight_control.field_mrp_production_weight_control__maximum_weight
+msgid "Maximum Weight"
+msgstr ""
+
+#. module: weight_control
+#: model:ir.model.fields,field_description:weight_control.field_product_product__maximum_weight
+#: model:ir.model.fields,field_description:weight_control.field_product_template__maximum_weight
+msgid "Maximum weight"
+msgstr ""
+
+#. module: weight_control
+#: model:ir.model.fields,field_description:weight_control.field_mrp_production_weight_control__minimum_weight
+msgid "Minimum Weight"
 msgstr ""
 
 #. module: weight_control
@@ -40,4 +105,29 @@ msgstr ""
 #. module: weight_control
 #: model:ir.model,name:weight_control.model_product_template
 msgid "Product"
+msgstr ""
+
+#. module: weight_control
+#: model:ir.model,name:weight_control.model_mrp_production
+msgid "Production Order"
+msgstr ""
+
+#. module: weight_control
+#: model:ir.model.fields,field_description:weight_control.field_mrp_production_weight_control__weight
+msgid "Weight"
+msgstr ""
+
+#. module: weight_control
+#: model_terms:ir.ui.view,arch_db:weight_control.view_mrp_production_form_inherit
+msgid "Weight Control"
+msgstr ""
+
+#. module: weight_control
+#: model:ir.model,name:weight_control.model_mrp_production_weight_control
+msgid "Weight Control for Manufacturing Orders"
+msgstr ""
+
+#. module: weight_control
+#: model:ir.model.fields,field_description:weight_control.field_mrp_production__weight_control_ids
+msgid "Weight Controls"
 msgstr ""

@@ -1,30 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <template id="report_mrp_bom_float" inherit_id="mrp.report_mrp_bom">
-        <xpath expr="//div/div/table/tbody/tr[1]/td[9]" position="replace" >
-            <td t-if="data['show_costs']" class="text-end" t-esc="data['bom_cost']" t-options='{"widget": "float", "decimal_precision": "Product Price"}'/>
-        </xpath>
-        <xpath expr="//div/div/table/tbody/tr[1]/td[10]" position="replace" >
-            <td t-if="data['show_costs']" class="text-end" t-esc="data['prod_cost']" t-options='{"widget": "float", "decimal_precision": "Product Price"}'/>
-        </xpath>
-        <xpath expr="//div/div/table/tbody/tr[2]" position="attributes" >
-            <attribute name="invisible">1</attribute>
-        </xpath>
-
-<!--        <xpath expr="//field[@name='company_id']" position="attributes">-->
-<!--                    <attribute name="invisible">1</attribute>-->
-<!--                </xpath>-->
-    </template>
-    <template id="report_mrp_bom_pdf_line_float" inherit_id="mrp.report_mrp_bom_pdf_line">
-        <xpath expr="//tr/td[9]" position="replace" >
-            <td t-if="data['show_costs']" t-attf-class="text-end {{ 'text-muted' if l['type'] == 'component' else '' }}" t-esc="l['bom_cost']" t-options='{"widget": "float", "decimal_precision": "Product Price"}'/>
-        </xpath>
-        <xpath expr="//tr/td[10]" position="replace" >
-            <td t-if="data['show_costs']" class="text-end">
-                <span t-if="'prod_cost' in l" t-esc="l['prod_cost']" t-options='{"widget": "float", "decimal_precision": "Product Price"}'/>
-            </td>
-        </xpath>
-    </template>
+<!--    estoy -->
 </odoo>
 
 <!--    <template id="report_mrp_bom">-->

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Indogosa Costos de Transporte</title>
+        <style type="text/css">
+            body {
+                font-family: Arial, sans-serif;
+                max-width: 900px;
+                margin: auto;
+                padding: 20px;
+                color: #333;
+            }
+            h1 {
+                color: #875A7B;
+                text-align: center;
+            }
+            h2 {
+                border-bottom: 1px solid #ddd;
+                padding-bottom: 10px;
+                margin-top: 30px;
+            }
+            .features {
+                margin: 20px 0;
+                padding-left: 20px;
+            }
+            .features li {
+                margin-bottom: 10px;
+            }
+            .screenshot {
+                text-align: center;
+                margin: 20px 0;
+            }
+            .credits {
+                margin-top: 40px;
+                border-top: 1px solid #ddd;
+                padding-top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="document">
+            <h1>Indogosa Costos de Transporte</h1>
+
+            <p>Este módulo permite gestionar los costos de transporte basados en el volumen de productos en órdenes de venta de Odoo 17.0.</p>
+
+            <h2>Características principales</h2>
+            <ul class="features">
+                <li>Añade un campo "Coste Transporte" en la ficha de cliente que es visible en la vista lista</li>
+                <li>Agrega el campo "Coste Transporte" en las órdenes de venta, autocompletado desde el cliente</li>
+                <li>Calcula automáticamente el total de litros por línea multiplicando el volumen del producto por la cantidad</li>
+                <li>Calcula el costo de transporte por línea dividiendo el coste de transporte entre el total de litros</li>
+                <li>El valor del coste de transporte puede ser editado en cada orden de venta específica</li>
+            </ul>
+
+            <h2>Uso</h2>
+            <ol>
+                <li>Configure el "Coste Transporte" en la ficha del cliente</li>
+                <li>Al crear una nueva orden de venta, el valor se cargará automáticamente al seleccionar el cliente</li>
+                <li>Cuando se agregan productos a la orden, se calculará automáticamente el "Total Litros" y el "Coste Transporte/Línea"</li>
+                <li>Si es necesario, puede modificar el "Coste Transporte" directamente en la orden de venta</li>
+            </ol>
+
+            <div class="credits">
+                <h2>Créditos</h2>
+                <p><strong>Autor:</strong> Xtendoo</p>
+                <p><strong>Contribuidores:</strong></p>
+                <ul>
+                    <li>Indogosa</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

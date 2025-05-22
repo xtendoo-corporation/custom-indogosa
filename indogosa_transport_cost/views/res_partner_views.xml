@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Añadir campo a la vista de formulario -->
+    <record id="view_partner_form_inherit_transport" model="ir.ui.view">
+        <field name="name">res.partner.form.transport</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='sales_purchases']" position="inside">
+                <group name="transport" string="Transporte">
+                    <field name="coste_transporte" widget="monetary"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Añadir campo a la vista de lista -->
+    <record id="view_partner_tree_inherit_transport" model="ir.ui.view">
+        <field name="name">res.partner.tree.transport</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_tree"/>
+        <field name="arch" type="xml">
+            <field name="display_name" position="after">
+                <field name="coste_transporte" optional="show"/>
+            </field>
+        </field>
+    </record>
+</odoo>

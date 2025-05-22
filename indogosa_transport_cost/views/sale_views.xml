@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_order_form_inherit_transport" model="ir.ui.view">
+        <field name="name">sale.order.form.transport</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <!-- Añadir el campo coste_transporte en el encabezado -->
+            <xpath expr="//group[@name='order_details']" position="inside">
+                <field name="coste_transporte" widget="monetary"/>
+            </xpath>
+
+            <!-- Modificar la vista tree de líneas de orden -->
+            <xpath expr="//field[@name='order_line']/tree" position="attributes">
+                <attribute name="editable">bottom</attribute>
+            </xpath>
+
+            <!-- Campos en la vista tree de líneas de orden -->
+            <xpath expr="//field[@name='order_line']/tree//field[@name='product_uom_qty']" position="before">
+                <field name="total_litros" sum="Total Litros"/>
+            </xpath>
+
+            <xpath expr="//field[@name='order_line']/tree//field[@name='price_subtotal']" position="before">
+                <field name="coste_transporte_linea"/>
+                <field name="total_coste_transporte" widget="monetary" sum="Total Coste Transporte"/>
+            </xpath>
+
+            <xpath expr="//field[@name='order_line']/tree//field[@name='price_subtotal']" position="after">
+                <field name="purchase_price" groups="base.group_user"/>
+                <field name="margin" groups="base.group_user"/>
+                <field name="margin_percent" widget="percentage" groups="base.group_user"/>
+            </xpath>
+
+            <!-- Campos en la vista form de líneas -->
+            <xpath expr="//field[@name='order_line']/form//field[@name='price_unit']" position="after">
+                <field name="total_litros"/>
+                <field name="coste_transporte_linea"/>
+                <field name="total_coste_transporte" widget="monetary"/>
+                <field name="purchase_price" groups="base.group_user"/>
+                <field name="margin" groups="base.group_user"/>
+                <field name="margin_percent" widget="percentage" groups="base.group_user"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Vista para la lista de órdenes de venta -->
+    <record id="view_order_tree_inherit_transport" model="ir.ui.view">
+        <field name="name">sale.order.tree.transport</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_quotation_tree"/>
+        <field name="arch" type="xml">
+            <field name="amount_total" position="before">
+                <field name="coste_transporte" optional="show" sum="Total Coste Transporte"/>
+            </field>
+        </field>
+    </record>
+
+    <!-- Vista de búsqueda -->
+    <record id="view_sales_order_filter_inherit_transport" model="ir.ui.view">
+        <field name="name">sale.order.list.select.transport</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_sales_order_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='customer']" position="after">
+                <filter string="Coste Transporte" name="coste_transporte" context="{'group_by':'coste_transporte'}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

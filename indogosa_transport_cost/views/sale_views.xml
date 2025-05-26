@@ -16,20 +16,22 @@
             </xpath>
 
             <!-- Campos en la vista tree de líneas de orden - todos ocultos por defecto -->
-            <xpath expr="//field[@name='order_line']/tree//field[@name='product_uom_qty']" position="before">
+            <xpath expr="//field[@name='order_line']/tree//field[@name='price_unit']" position="before">
                 <field name="total_litros" sum="Total Litros" optional="hide"/>
             </xpath>
 
-            <xpath expr="//field[@name='order_line']/tree//field[@name='price_subtotal']" position="before">
+            <xpath expr="//field[@name='order_line']/tree//field[@name='purchase_price']" position="after">
                 <field name="coste_transporte_linea" optional="hide"/>
-                <field name="total_coste_transporte" widget="monetary" sum="Total Coste Transporte" optional="hide"/>
+                <field name="total_coste_transporte" sum="Total Coste Transporte" optional="hide"/>
+                <field name="coste_total" sum="Total Coste" optional="hide"/>
             </xpath>
 
             <!-- Campos en la vista form de líneas -->
             <xpath expr="//field[@name='order_line']/form//field[@name='price_unit']" position="after">
                 <field name="total_litros"/>
                 <field name="coste_transporte_linea"/>
-                <field name="total_coste_transporte" widget="monetary"/>
+                <field name="total_coste_transporte"/>
+                <field name="coste_total"/>
             </xpath>
         </field>
     </record>

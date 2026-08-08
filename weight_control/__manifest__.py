@@ -1,7 +1,7 @@
 {
     "name": "Weight Control",
     "summary": "Weight control",
-    "version": "18.0.1.0.0",
+    "version": "19.0.1.0.0",
     "category": "Product",
     "author": "Xtendoo",
     "license": "LGPL-3",

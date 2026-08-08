@@ -10,10 +10,10 @@ class SaleOrderLine(models.Model):
         compute='_compute_total_units'
     )
 
-    @api.depends('product_uom_qty', 'product_uom')
+    @api.depends('product_uom_qty', 'product_uom_id')
     def _compute_total_units(self):
         for line in self:
-            line.total_units = line.product_uom_qty * line.product_uom.ratio
+            line.total_units = line.product_uom_qty * line.product_uom_id.ratio
 
     # precompute=False (bug real encontrado migrando a 18.0, no estaba antes):
     # este campo depende de order_id.total_units_sum, un campo computado del

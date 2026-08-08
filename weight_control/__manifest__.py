@@ -1,7 +1,7 @@
 {
     "name": "Weight Control",
     "summary": "Weight control",
-    "version": "17.0.1.0.0",
+    "version": "18.0.1.0.0",
     "category": "Product",
     "author": "Xtendoo",
     "license": "LGPL-3",
@@ -9,6 +9,10 @@
     "depends": [
         'mrp',
         'product',
+        'hr',  # employee_id (mrp.production.weight.control) depende de hr.employee,
+               # dependencia real pero no declarada en el manifest de 17.0 -
+               # funcionaba solo porque hr ya estaba instalado en prodequim
+               # por otro motivo. Corregido al portar.
     ],
     "data": [
         "views/product_template_view.xml",

@@ -10,16 +10,16 @@
                 <field name="coste_transporte" widget="monetary"/>
             </xpath>
 
-            <!-- Modificar la vista tree de líneas de orden -->
-            <xpath expr="//field[@name='order_line']/tree" position="attributes">
+            <!-- Modificar la vista list de líneas de orden (18.0: <tree> -> <list>) -->
+            <xpath expr="//field[@name='order_line']/list" position="attributes">
                 <attribute name="editable">bottom</attribute>
             </xpath>
 
-            <xpath expr="//field[@name='order_line']/tree//field[@name='price_unit']" position="before">
+            <xpath expr="//field[@name='order_line']/list//field[@name='price_unit']" position="before">
                 <field name="total_units" optional="show" sum="Total Unidades"/>
             </xpath>
 
-            <xpath expr="//field[@name='order_line']/tree//field[@name='purchase_price']" position="after">
+            <xpath expr="//field[@name='order_line']/list//field[@name='purchase_price']" position="after">
                 <field name="coste_transporte_linea" optional="hide"/>
                 <field name="total_coste_transporte" sum="Total Coste Transporte" optional="hide"/>
                 <field name="coste_total" sum="Total Coste" optional="hide"/>

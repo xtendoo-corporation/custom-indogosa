@@ -17,7 +17,7 @@
                         </group>
                         <group name="box" string="Cajas">
                             <field name="weight_box" class="oe_inline"/>
-                            <field name="volume_box" class="oe_inline"/>l
+                            <field name="volume_box" class="oe_inline"/>
                             <field name="long_box" class="oe_inline"/>
                             <field name="high_box" class="oe_inline"/>
                             <field name="broad_box" class="oe_inline"/>
@@ -42,12 +42,15 @@
         <field name="model">product.template</field>
         <field name="inherit_id" ref="product.product_template_kanban_view"/>
         <field name="arch" type="xml">
-            <xpath expr="//div[@name='product_lst_price']" position="after">
-                <div name="product_standard_price" class="mt-1">
-                    Coste:
-                    <field name="standard_price" widget="monetary"
-                           options="{'currency_field': 'currency_id', 'field_digits': True}"/>
-                </div>
+            <!-- 18.0: la kanban de producto se reescribió con la plantilla
+                 t-name="card" nueva; ya no existe div[@name='product_lst_price'].
+                 Se inserta el coste justo después del precio de venta
+                 (field list_price) dentro del mismo <span>. -->
+            <xpath expr="//field[@name='list_price']" position="after">
+                <br/>
+                Coste:
+                <field name="standard_price" widget="monetary"
+                       options="{'currency_field': 'currency_id', 'field_digits': True}"/>
             </xpath>
         </field>
     </record>

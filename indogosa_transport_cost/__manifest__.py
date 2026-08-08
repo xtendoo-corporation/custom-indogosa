@@ -1,7 +1,7 @@
 # __manifest__.py
 {
     'name': 'Indogosa Costos de Transporte',
-    'version': '17.0.1.0.0',
+    'version': '18.0.1.0.0',
     'category': 'Sales/Sales',
     'summary': 'Gestión de costos de transporte basados en volumen',
     'author': 'Xtendoo',

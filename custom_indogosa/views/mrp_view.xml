@@ -7,7 +7,7 @@
         <field name="inherit_id" ref="xtendoo_mrp_bom_cost.mrp_bom_form_view"/>
         <field name="arch" type="xml">
             <xpath
-                expr="//field[@name='bom_line_ids']/tree/field[@name='product_qty']"
+                expr="//field[@name='bom_line_ids']/list/field[@name='product_qty']"
                 position="replace"
             >
                 <field name="product_qty" context="{'uom': product_qty}"/>

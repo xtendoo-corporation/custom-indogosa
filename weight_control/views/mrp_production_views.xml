@@ -7,14 +7,14 @@
             <xpath expr="//page[@name='operations']" position="after">
                 <page name="weight_control" string="Weight Control">
                     <field name="weight_control_ids" context="{'default_production_id': active_id}">
-                        <tree editable="bottom" decoration-danger="is_weight_control == False">
+                        <list editable="bottom" decoration-danger="is_weight_control == False">
                             <field name="employee_id"/>
                             <field name="weight"/>
                             <field name="minimum_weight" />
                             <field name="maximum_weight"/>
                             <field name="date" />
                             <field name="is_weight_control" widget="boolean" invisible="1" />
-                        </tree>
+                        </list>
                     </field>
                 </page>
             </xpath>

@@ -15,11 +15,22 @@ class SaleOrderLine(models.Model):
         for line in self:
             line.total_units = line.product_uom_qty * line.product_uom.ratio
 
+    # precompute=False (bug real encontrado migrando a 18.0, no estaba antes):
+    # este campo depende de order_id.total_units_sum, un campo computado del
+    # PEDIDO que a su vez depende de las lineas hermanas. Con precompute=True,
+    # al crear pedido+lineas en una sola llamada create() (el flujo normal al
+    # guardar un pedido nuevo desde el formulario), Odoo calcula este campo
+    # ANTES de que total_units_sum del pedido este resuelto, y el resultado
+    # queda fijado en 0 sin volver a recalcularse nunca (verificado en vivo:
+    # con precompute=True el campo queda en 0.0 tras un create() atomico
+    # aunque total_units_sum del pedido SI se calcula bien). Mismo motivo por
+    # el que margin/margin_percent/coste_total ya llevaban precompute=False
+    # mas abajo — aqui faltaba aplicar el mismo criterio.
     coste_transporte_linea = fields.Float(
         string='Coste Transporte',
         compute='_compute_transport_base',
         store=True,
-        precompute=True,
+        precompute=False,
         digits=(16, 6)
     )
 
@@ -27,7 +38,7 @@ class SaleOrderLine(models.Model):
         string='Coste Total Transporte',
         compute='_compute_transport_base',
         store=True,
-        precompute=True,
+        precompute=False,
         digits=(16, 6)
     )
 

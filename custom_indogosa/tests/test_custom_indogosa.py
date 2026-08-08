@@ -135,6 +135,13 @@ class TestCustomIndogosa(TransactionCase):
         self.assertEqual(uom, self.env.ref("uom.product_uom_litre"))
 
     def test_res_config_settings_default(self):
+        # Otros tests de esta misma clase ya dejan escrito el
+        # ir.config_parameter subyacente (TransactionCase no hace rollback
+        # entre metodos) — hay que borrarlo explicitamente para probar de
+        # verdad el default='2' declarado en el campo, no un valor heredado.
+        self.env["ir.config_parameter"].sudo().search(
+            [("key", "=", "product.volume_in_cubic_feet")]
+        ).unlink()
         settings = self.env["res.config.settings"].create({})
         self.assertEqual(settings.product_volume_volume_in_cubic_feet, "2")
 

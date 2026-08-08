@@ -10,7 +10,7 @@ class SaleOrder(models.Model):
         help='Suma de las unidades totales de todas las líneas'
     )
 
-    @api.depends('order_line.total_units', 'order_line.product_uom_qty', 'order_line.product_uom_id.factor_inv')
+    @api.depends('order_line.total_units', 'order_line.product_uom_qty', 'order_line.product_uom_id.factor')
     def _compute_total_units_sum(self):
         for order in self:
             order.total_units_sum = sum(order.order_line.mapped('total_units'))

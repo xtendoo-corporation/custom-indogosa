@@ -6,7 +6,7 @@
         <field name="arch" type="xml">
             <xpath expr="//page[@name='operations']" position="after">
                 <page name="weight_control" string="Weight Control">
-                    <field name="weight_control_ids" context="{'default_production_id': active_id}">
+                    <field name="weight_control_ids" context="{'default_production_id': id}">
                         <list editable="bottom" decoration-danger="is_weight_control == False">
                             <field name="employee_id"/>
                             <field name="weight"/>

@@ -67,7 +67,7 @@ class TestCustomIndogosa(TransactionCase):
         )
         move = self.env["stock.move"].create(
             {
-                "name": self.component.name,
+                "inventory_name": self.component.name,
                 "product_id": self.component.id,
                 "product_uom_qty": 1.0,
                 "product_uom": self.component.uom_id.id,
